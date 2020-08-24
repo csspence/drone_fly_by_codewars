@@ -10,6 +10,12 @@ The drone string represents the position of the drone T (any better suggestion f
 Return the resulting lamps string. See example tests for more clarity.
 */
 
-function flyBy(lamps, drone){
-
+function flyBy(lamps, drone) {
+  l = lamps.split('');
+    
+    for(i = 0; i < drone.split('').length; i++) {
+      l[i] = 'o';
+    }
+    
+    return l.join('').substr(0, lamps.length);
 }
